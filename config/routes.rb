@@ -9,5 +9,11 @@ Rails.application.routes.draw do
   # get '/recipes/:id', to: 'recipes#show', as: 'recipe'
   # delete '/recipes:id', to: 'recipes#destory'
   
-  resources :recipes
+  resources :recipes do
+    member do
+      post  'like'
+    end
+  end
+  
+  
 end

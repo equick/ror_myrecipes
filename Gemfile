@@ -27,6 +27,7 @@ gem 'mini_magick', '4.6.0'
 gem 'will_paginate', '3.1.5'
 gem 'bootstrap-will_paginate', '0.0.10'
 gem 'bcrypt', '3.1.11'
+gem 'fog', '1.38.0'
 
 
 # Use ActiveModel has_secure_password

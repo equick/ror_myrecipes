@@ -11,15 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161228102852) do
+ActiveRecord::Schema.define(version: 20161229170038) do
 
-  create_table "chefs", force: :cascade do |t|
-    t.string   "chefname"
-    t.string   "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "password_digest"
-  end
+# Could not dump table "chefs" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
   create_table "ingredients", force: :cascade do |t|
     t.string "name"
@@ -56,5 +51,8 @@ ActiveRecord::Schema.define(version: 20161228102852) do
   create_table "styles", force: :cascade do |t|
     t.string "name"
   end
+
+# Could not dump table "tmp_table" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
 end

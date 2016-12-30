@@ -9,9 +9,13 @@ Rails.application.routes.draw do
   # get '/recipes/:id', to: 'recipes#show', as: 'recipe'
   # delete '/recipes:id', to: 'recipes#destory'
   
+  get '/recipes/:id/review', to: 'reviews#index', as: 'review'
+  get '/recipes/:id/review/new', to: 'reviews#new', as: 'new_review'
+  post '/recipes/:id/review', to: 'reviews#create', as: 'reviews'
+  
   resources :recipes do
     member do
-      post  'like'
+      post 'like'
     end
   end
   

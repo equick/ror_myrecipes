@@ -1,0 +1,14 @@
+<div class="col-md-8">
+    <h4>Reviews:</h4>
+    <% if !@reviews.nil? %>
+        <% @reviews.each do |review| %>
+            <div class="row">
+                <div class="col-md-8">
+                    "<%= review.body %>"
+                    <small>Added <%= review.created_at %>
+                    By <%= review.chef.chefname %></small>
+                 </div>
+            </div>  
+        <% end %>
+    <% end %>
+</div>

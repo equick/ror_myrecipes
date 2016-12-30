@@ -11,7 +11,11 @@ class RecipesController < ApplicationController
     end
     
     def show
-      
+      begin
+        @reviews = Review.where(recipe_id: params[:id])
+      rescue
+        @reviews = nil
+      end
     end
     
     def new
@@ -41,6 +45,10 @@ class RecipesController < ApplicationController
       else
         render :edit
       end
+    end
+    
+    def review
+    
     end
     
     def like

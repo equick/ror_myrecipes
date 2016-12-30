@@ -37,6 +37,11 @@
             </div>
         </div>
     </div>
+    
+    <%= render 'review' %>
 </div>
-
-<h5><%= link_to 'Return to Recipes Listing', recipes_path, class: "btn btn-warning btn-small" %></h5>
+<br><br>
+<%= link_to 'Return to Recipes Listing', recipes_path, class: "btn btn-warning btn-small" %>
+<% if logged_in? %>
+    <%= link_to 'Submit a Review', new_review_path, class: "btn btn-warning btn-small" %>
+<% end %>
